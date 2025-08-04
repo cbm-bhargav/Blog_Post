@@ -15,13 +15,13 @@ const Header = () => {
         setFilterPost(filter)
     },[searchText])
   return (
-    <div className='w-full h-[60px] flex justify-center items-center'>
+    <div className='w-full h-[100px] flex justify-center items-center'>
         <input 
             type="text"
             placeholder='Search....'
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}  
-            className='border-2 rounded-full w-1/3  text-2xl font-bold px-4 py-1 m-1'    
+            className='border-2 rounded-full w-1/3  text-2xl font-bold px-4 py-1 m-1 my-5'    
         />
     </div>
   )
