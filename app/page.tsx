@@ -18,7 +18,7 @@ export default function Blog() {
             <Link href={`/${post.id}`}>
               <button className='border mx-auto px-4 py-1 rounded-xl text-lg hover:bg-sky-300 text-black cursor-pointer'>Read Me..</button>
             </Link>
-            <p className="flex items-center gap-2"><FaEye className='text-blue-700 text-lg' /> {post.views}</p>
+            <p className="flex items-center text-md font-semibold gap-2"><FaEye className='text-blue-700 text-lg' /> {post.views}</p>
             </div>
         </div>
       )}
