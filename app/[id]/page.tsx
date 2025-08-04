@@ -18,11 +18,11 @@ export default function Post({ params }: { params: Promise<{ id: string }> }) {
         <div className='flex flex-row flex-wrap justify-around items-center mb-2 '>
           <Image src={post.author.profilePicture} alt='Author Profile Picture' width={100} height={100}
             className='w-[100px] h-[100px] object-cover rounded-full'></Image>
-          <h1 className='text-2xl font-bold mb-2'>{post.author.name}</h1>
+          <h1 className='text-2xl font-bold font-mono mb-2'>{post.author.name}</h1>
         </div>
         <h2 className="text-xl font-bold mb-2">{post.title}</h2>
-        <p className='mb-2'>{post.body}</p>
-        <p className='mb-2'>{post.tags.join(', ')}</p>
+        <p className='text-lg mb-2'>{post.body}</p>
+        <p className='text-lg font-semiboldmb-2 '>{post.tags.join(', ')}</p>
         <div className='flex flex-row flex-wrap justify-between items-end mt-auto'>
           <div className='flex flex-row flex-nowrap gap-x-3'>
             <p className="flex items-center gap-1"><FaThumbsUp className='text-green-700' /> {post.reactions.likes}</p>
