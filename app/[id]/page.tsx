@@ -3,10 +3,11 @@ import React,  { use } from 'react';
 import { usePostContext } from '@/app/context/PostContext';
 import Image from 'next/image';
 import { FaThumbsUp, FaThumbsDown, FaEye } from 'react-icons/fa';
+import { useSearchParams } from 'next/navigation';
 
-
-export default function Post({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function Post({ params } : { params : Promise<{ id : string }> }) {
+  const { id } = use(params) 
+  const searchParams = useSearchParams()
   const { posts } = usePostContext();
   const post = posts.find((p) => p.id === Number(id))
 

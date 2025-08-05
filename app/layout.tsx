@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import { PostProvider } from '@/app/context/PostContext';
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "NXT Blog",
@@ -17,8 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <PostProvider>
-          <Header/>
-          {children}
+          <Suspense fallback={<Loading/>} >  
+            <Header/>
+           {children}
+          </Suspense> 
         </PostProvider>
       </body>
     </html>
